@@ -125,4 +125,23 @@ public:
         delete current;
         cout << "Nama menu " << delNamaMenu << " sudah terhapus" << endl;
     }
+
+    void traverseNode()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList kosong" << endl;
+            return;
+        }
+
+        Node *currentNode = START;
+        cout << "\nDaftar nama menu dari abjad terkecil:\n";
+        int i = 0;
+        while (currentNode != NULL)
+        {
+            cout << i + 1 << ". " << currentNode->namaMenu << " " << endl;
+            currentNode = currentNode->next;
+            i++;
+        }
+    }
 };
