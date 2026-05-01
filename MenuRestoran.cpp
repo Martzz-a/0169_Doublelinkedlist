@@ -61,5 +61,15 @@ public:
             cout << "\nTidak boleh ada duplikasi nama menu" << endl;
             return;
         }
-    }
+
+        // Step 9: Menyisipkan di antara current and current->next
+        newNode->next = current->next; // Step 9a: newNode.next = current.next
+        newNode->prev = current;       // Step 9b: newNode.prev = current
+
+        // Menyisipkan last node
+        if (current->next != NULL)
+            current->next->prev = newNode; // Step 9c: current.next.prev = newNode
+
+        current->next = newNode; // Step 9d: current.next = newNode
+    } 
 };
