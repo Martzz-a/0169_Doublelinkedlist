@@ -109,5 +109,16 @@ public:
             if (START != NULL)
                 START->prev = NULL; // Step 2b: START.prev = NULL
         }
+        else
+        {
+            // Step 3: Link previous node to next of current
+            current->prev->next = current->next;
+
+            // Step 4: Jika current bukan node terakhir
+            if (current->next != NULL)
+            {
+                current->next->prev = current->prev;
+            }
+        }
     }
 };
