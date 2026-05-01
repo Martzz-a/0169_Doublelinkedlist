@@ -32,5 +32,20 @@ public:
 
         // Step 2: Mengisi data di data fields
         newNode->namaMenu = addNamaMenu;
+
+        // Step 3: Menyisipkan diawal jika list kosong atau abjad lebih awal dari start
+        if (START == NULL || addNamaMenu <= START->namaMenu)
+        {
+            if (START != NULL && addNamaMenu == START->namaMenu)
+            {
+                cout << "\nTidak boleh ada duplikasi nama menu" << endl;
+                return;
+            }
+
+            newNode->next = NULL;
+            newNode->prev = NULL;
+            START = newNode;
+            return;
+        }
     }
 };
