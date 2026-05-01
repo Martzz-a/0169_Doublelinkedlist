@@ -55,5 +55,11 @@ public:
         {
             current = current->next;
         }
+
+        if (current->next != NULL && addNamaMenu == current->next->namaMenu)
+        {
+            cout << "\nTidak boleh ada duplikasi nama menu" << endl;
+            return;
+        }
     }
 };
