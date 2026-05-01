@@ -244,3 +244,10 @@ public:
         } while (choice != '6');
     }
 };
+
+int main()
+{
+    DoubleLinkedList list;
+    list.menu();
+    return 0;
+};
