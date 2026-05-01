@@ -160,5 +160,13 @@ public:
             currentNode = currentNode->next;
             i++;
         }
+
+        cout << "\nDaftar nama menu berdasarkan abjad terbesar:\n";
+        while (currentNode != NULL)
+        {
+            cout << i + 1 << ". " << currentNode->namaMenu << " " << endl;
+            currentNode = currentNode->prev;
+            i--;
+        }
     }
 };
