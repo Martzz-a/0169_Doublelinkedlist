@@ -186,5 +186,15 @@ public:
 
         while (current != NULL && current->namaMenu != searchNamaMenu)
             current = current->next;
+
+        if (current == NULL)
+        {
+            cout << "Menu tidak ditemukan\n";
+        }
+        else
+        {
+            cout << "Menu ditemukan\n";
+            cout << "Nama menu: " << current->namaMenu << endl;
+        }
     }
 };
