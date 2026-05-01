@@ -71,5 +71,18 @@ public:
             current->next->prev = newNode; // Step 9c: current.next.prev = newNode
 
         current->next = newNode; // Step 9d: current.next = newNode
-    } 
+    }
+
+    void delNode()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList kosong" << endl;
+            return;
+        }
+
+        cout << "\nMasukkan nama menu yang ingin dihapus: ";
+        string delNamaMenu;
+        cin >> delNamaMenu;
+    }
 };
