@@ -144,4 +144,21 @@ public:
             i++;
         }
     }
+
+    void revtraverseNode()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList kosong" << endl;
+            return;
+        }
+
+        Node *currentNode = START;
+        int i = 0;
+        while (currentNode->next != NULL)
+        {
+            currentNode = currentNode->next;
+            i++;
+        }
+    }
 };
