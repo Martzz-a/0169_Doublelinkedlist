@@ -197,4 +197,50 @@ public:
             cout << "Nama menu: " << current->namaMenu << endl;
         }
     }
+
+    void menu()
+    {
+        char choice;
+        do
+        {
+            cout << "\nMenu:\n";
+            cout << "1. Menambah Menu\n";
+            cout << "2. Menghapus Menu\n";
+            cout << "3. View Ascending\n";
+            cout << "4. View Descending\n";
+            cout << "5. Mencari Menu\n";
+            cout << "6. Keluar\n";
+            cout << "Masukkan Pilihan: ";
+            cin >> choice;
+
+            switch (choice)
+            {
+            case '1':
+                addNode();
+                break;
+            case '2':
+                delNode();
+                break;
+            case '3':
+                traverseNode();
+                break;
+            case '4':
+                revtraverseNode();
+                break;
+            case '5':
+                searchNode();
+                break;
+            case '6':
+                return;
+            default:
+                cout << "Pilihan Salah\n";
+            }
+
+            cout << "\nTekan Enter untuk melanjutkan...";
+            cin.ignore();
+            cin.get();
+            cout << endl;
+            system("clear"); // Gunakan system("cls") untuk Windows
+        } while (choice != '6');
+    }
 };
