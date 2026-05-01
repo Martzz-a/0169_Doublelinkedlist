@@ -120,5 +120,9 @@ public:
                 current->next->prev = current->prev;
             }
         }
+
+        // Step 5: Menghapus node
+        delete current;
+        cout << "Nama menu " << delNamaMenu << " sudah terhapus" << endl;
     }
 };
