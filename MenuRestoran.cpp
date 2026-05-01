@@ -47,5 +47,13 @@ public:
             START = newNode;
             return;
         }
+
+        // Memasukkan di tengah node
+        // Step 8: Mengalokasikan posisi untuk node
+        Node *current = START;
+        while (current->next != NULL && current->next->namaMenu < addNamaMenu)
+        {
+            current = current->next;
+        }
     }
 };
