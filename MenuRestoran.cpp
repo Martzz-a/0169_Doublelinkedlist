@@ -84,5 +84,22 @@ public:
         cout << "\nMasukkan nama menu yang ingin dihapus: ";
         string delNamaMenu;
         cin >> delNamaMenu;
+
+        Node *current = START;
+
+        // Step 1: Menelusuri list untuk menemukan node tersebut
+        while (current != NULL && current->namaMenu != delNamaMenu)
+            current = current->next;
+
+        if (current == NULL)
+        {
+            cout << "Menu tidak ditemukan" << endl;
+            return;
+        }
+        else
+        {
+            cout << "Menu ditemukan" << endl;
+            cout << "Nama menu: " << current->namaMenu << endl;
+        }
     }
 };
