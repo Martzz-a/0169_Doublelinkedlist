@@ -169,4 +169,22 @@ public:
             i--;
         }
     }
+
+    void searchNode()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList kosong" << endl;
+            return;
+        }
+
+        string searchNamaMenu;
+        cout << "\nMasukkan nama menu yang ingin dicari: ";
+        cin >> searchNamaMenu;
+
+        Node *current = START;
+
+        while (current != NULL && current->namaMenu != searchNamaMenu)
+            current = current->next;
+    }
 };
