@@ -101,5 +101,13 @@ public:
             cout << "Menu ditemukan" << endl;
             cout << "Nama menu: " << current->namaMenu << endl;
         }
+
+        // Step 2: Jika node berada di awal
+        if (current == START)
+        {
+            START = current->next; // Step 2a: START = START.next
+            if (START != NULL)
+                START->prev = NULL; // Step 2b: START.prev = NULL
+        }
     }
 };
